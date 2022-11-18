@@ -1,7 +1,5 @@
 package com.practice.multitenancy.domain;
 
-import org.springframework.data.redis.core.RedisHash;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

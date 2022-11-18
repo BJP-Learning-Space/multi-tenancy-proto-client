@@ -15,13 +15,11 @@ public class EmployeeQueryService {
         this.employeeRepository = employeeRepository;
     }
 
-    @Cacheable(value = "employee", key = "#id")
     public Employee findById(final Long id) {
         return employeeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
     }
 
-    @Cacheable(value = "employees")
     public Collection<Employee> findAll() {
         return employeeRepository.findAll();
     }
